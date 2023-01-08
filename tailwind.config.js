@@ -6,8 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: colors.purple,
-				danger: colors.pink,
+				primary: colors.blue,
+				danger: colors.red,
 			},
 			backgroundImage: (theme) => ({
 				'cover-image': "url('../../img/cover.jpg')",

@@ -7,7 +7,7 @@ $config = $this->Framework->getConfig();
 
 <div class="-mx-2 my-2 px-2">
 
-    <main class="grid grid-cols-1 md:grid-cols-5 my-2 w-full bg-white shadow-sm rounded-lg overflow-hidden">
+    <main class="grid grid-cols-1 md:grid-cols-5 my-2 w-full bg-white shadow-md rounded-lg overflow-hidden">
         <div class="bg-cover-image shadow-sm bg-center bg-cover px-6 py-16">
             <div class="w-3/4 mx-auto">
                 <img
