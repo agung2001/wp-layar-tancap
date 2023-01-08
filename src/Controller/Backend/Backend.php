@@ -43,18 +43,24 @@ class Backend extends Controller {
 	 * @return  void
 	 */
 	public function backend_enequeue() {
+		global $post;
 		define( 'LAYARTANCAP_SCREEN', json_encode( $this->WP->getScreen() ) );
         $default = $this->Framework->getConfig()->default;
 		$config  = $this->Framework->getConfig()->options;
         $screen  = $this->WP->getScreen();
+		$screen->base = str_replace(" ","-", $screen->base);
 		$slug    = sprintf( '%s-setting', $this->Framework->getSlug() );
 		$screens = array( sprintf( 'settings_page_%s', $slug ) );
-
-		/** Load Core Vendors */
-        wp_enqueue_script('jquery');
+		$allowedPage = ['post.php', 'post-new.php'];
 
 		/** Load Vendors */
-        if ( in_array( str_replace(" ","-", $screen->base), $screens )  ) {
+        if (
+			in_array( $screen->base, $screens ) ||
+			( $post->post_type === 'movie' && in_array($screen->pagenow, $allowedPage) )
+		) {
+			/** Load Core Vendors */
+			wp_enqueue_script('jquery');
+
             $this->WP->enqueue_assets( $config->layartancap_assets->backend );
 			$this->WP->wp_enqueue_style( 'animatecss', 'vendor/animatecss/animate.min.css' );
 

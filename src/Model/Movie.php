@@ -33,12 +33,13 @@ class Movie extends \LayarTancap\Model\Model
         $this->args['labels'] = ['name' => ucwords($this->name)];
 		$this->args['public'] = true;
 		$this->args['publicly_queryable'] = true;
-		$this->args['menu_icon'] = json_decode( LAYARTANCAP_PATH )->framework_url . '/assets/img/icon.png';
+		$this->args['menu_icon'] = 'dashicons-media-video';
 		$this->args['has_archive'] = true;
 		$this->args['show_in_rest'] = true;
         $this->args['supports'] = array('title', 'editor', 'thumbnail');
 
 		/** @backend */
+	/** TODO: This section should be deleted */
 //		$action = new Action();
 //		$action->setComponent( $this );
 //		$action->setHook( 'save_post' );
