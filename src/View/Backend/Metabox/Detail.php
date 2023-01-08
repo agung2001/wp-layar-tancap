@@ -7,17 +7,17 @@
 				</div>
 				<div class="grid grid-cols-12 gap-4 py-4 fab-option-container-">
 					<div class="col-span-3 md:col-span-1 font-medium text-gray-600 pt-2">
-						<label for="field_fab_setting_type">
+						<label for="field_option_detail_year">
 							<?php echo esc_html__('Year', 'layartancap') ?>
 						</label>
 					</div>
 					<div class="col-span-9 md:col-span-11">
 						<input type="number"
-						   id="field_option_design_template_icon"
-						   name="fab_design[template][icon][class]"
+						   id="field_option_detail_year"
+						   name="metabox_detail_year"
 						   class="border border-gray-200 py-2 px-3 text-grey-darkest w-full"
+						   value="<?php echo esc_attr( $year ) ?>"
 						   placeholder="Movie Year"
-						   required
 						>
 					</div>
 				</div>

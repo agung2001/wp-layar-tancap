@@ -10,7 +10,7 @@ namespace LayarTancap\Model;
 
 ! defined( 'WPINC ' ) || die;
 
-use LayarTancap\Wordpress\Hook\Action;
+use LayarTancap\WordPress\Hook\Action;
 use LayarTancap\Helper\LAYARTANCAPItem;
 
 class Movie extends \LayarTancap\Model\Model
@@ -39,14 +39,13 @@ class Movie extends \LayarTancap\Model\Model
         $this->args['supports'] = array('title', 'editor', 'thumbnail');
 
 		/** @backend */
-	/** TODO: This section should be deleted */
-//		$action = new Action();
-//		$action->setComponent( $this );
-//		$action->setHook( 'save_post' );
-//		$action->setCallback( 'metabox_save_data' );
-//		$action->setMandatory( true );
-//		$action->setDescription( 'Save LAYARTANCAP Metabox Data' );
-//		$this->hooks[] = $action;
+		$action = new Action();
+		$action->setComponent( $this );
+		$action->setHook( 'save_post' );
+		$action->setCallback( 'metabox_save_data' );
+		$action->setMandatory( true );
+		$action->setDescription( 'Save Movie Metabox Data' );
+		$this->hooks[] = $action;
 	}
 
 	/**
@@ -58,43 +57,13 @@ class Movie extends \LayarTancap\Model\Model
 		global $post;
 
 		/** Check Correct Post Type, Ignore Trash */
-		if ( ! isset( $post->ID ) || $post->post_type !== 'fab' || $post->post_status === 'trash' ) {
+		if ( ! isset( $post->ID ) || $post->post_type !== 'movie' || $post->post_status === 'trash' ) {
 			return;
 		}
 
-		/** Save Metabox Setting */
-		if ( $this->checkInput( LAYARTANCAPMetaboxSetting::$input ) ) {
-			$metabox = new LAYARTANCAPMetaboxSetting();
-			$metabox->sanitize();
-			$metabox->setDefaultInput();
-			$metabox->save();
-		}
-
-		/** Save Metabox Design */
-		if ( $this->checkInput( LAYARTANCAPMetaboxDesign::$input ) ) {
-			$metabox = new LAYARTANCAPMetaboxDesign();
-			$metabox->sanitize();
-			$metabox->setDefaultInput();
-			$metabox->save();
-		}
-
-		/** Save Metabox Location */
-		if ( $this->checkInput( LAYARTANCAPMetaboxLocation::$input ) ) {
-			$metabox = new LAYARTANCAPMetaboxLocation();
-			$metabox->sanitize();
-			$metabox->setDefaultInput();
-			$metabox->save();
-		} else {
-			$this->WP->delete_post_meta( $post->ID, LAYARTANCAPMetaboxLocation::$post_metas['locations']['meta_key'] );
-		}
-
-		/** Save Metabox Trigger */
-		if ( $this->checkInput( LAYARTANCAPMetaboxTrigger::$input ) ) {
-			$metabox = new LAYARTANCAPMetaboxTrigger();
-			$metabox->sanitize();
-			$metabox->setDefaultInput();
-			$metabox->save();
-		}
+		/** Save Metabox Detail - Year */
+		$year = sanitize_text_field( $_POST['metabox_detail_year'] );
+		update_post_meta( $post->ID, 'year', $year );
 	}
 
 }

@@ -61,8 +61,10 @@ class MetaboxDetail extends Base {
 		$view = new View( $this->Framework );
 		$view->setTemplate( 'backend.blank' );
 		$view->setSections( [ 'Backend.Metabox.Detail' => [ 'name' => 'Detail', 'active' => true ] ] );
-//		$view->addData([]);
-		$view->setOptions( array( 'shortcode' => false ) );
+		$view->setData( [
+			'year' => get_post_meta( get_the_ID(), 'year', true ),
+		]);
+		$view->setOptions( array( 'shortcode' => true ) );
 		$view->build();
 	}
 
