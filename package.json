@@ -35,5 +35,14 @@
   "bugs": {
     "url": "https://github.com/agung2001/wp-layar-tancap/issues"
   },
-  "homepage": "https://github.com/agung2001/wp-layar-tancap#readme"
+  "homepage": "https://github.com/agung2001/wp-layar-tancap#readme",
+  "lint-staged": {
+    "assets/js/**/*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "assets/css/**/*.{css,scss}": [
+      "prettier --write"
+    ]
+  }
 }

@@ -8,5 +8,7 @@
             "email": "muhagung2001@gmail.com"
         }
     ],
-    "require": {}
+  "require": {
+    "artistudioxyz/dot-framework": "v0.1.1"
+  }
 }

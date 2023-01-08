@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = function (grunt) {
 	/** Configuration */
 	grunt.initConfig({
@@ -9,6 +10,12 @@ module.exports = function (grunt) {
 				command:
 					`npx tailwindcss build assets/css/tailwind/style.css -o assets/build/css/tailwind.min.css --silent && ` +
 					`node tailwindcsssupport.js`,
+			},
+			dot_refactor: {
+				command: `aspri --wp-refactor --path ${path.resolve(
+					__dirname,
+					'vendor/artistudioxyz/dot-framework'
+				)} --from Dot --to LayarTancap --type plugin && composer dump-autoload`,
 			},
 		},
 

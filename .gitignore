@@ -3,7 +3,7 @@
 /.vscode
 
 # Vendors
-/vendors
+/vendor
 /node_modules
 
 # Extras
