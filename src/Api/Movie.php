@@ -53,18 +53,30 @@ class Movie extends Controller {
 	 * Get Movies
 	 */
 	public function get_movies( $request ){
-		$args = array(
-			'page' => $request->get_param( 'page' ),
-			'posts_per_page' => $request->get_param( 'posts_per_page' ),
-		);
-		$defaultArgs = array(
+		$defaults = array(
 			'page' => 1,
+			'offset' => 0,
 			'posts_per_page' => -1,
+			'category'         => 0,
+			'orderby'          => 'date',
+			'order'            => 'DESC',
+			'include'          => array(),
+			'exclude'          => array(),
+			'meta_key'         => '',
+			'meta_value'       => '',
+			'suppress_filters' => true,
 		);
+
 		/** Set Default if Not Exists */
-		foreach($args as $key => &$value){
-			if(!$value){
-				$value = $defaultArgs[$key];
+		$args = array();
+		foreach($defaults as $key => $value){
+			$param = $request->get_param( $key );
+			if( $param ){
+				if(in_array($key, array('include', 'exclude'))){
+					$args[$key] = explode(',', $param);
+				} else {
+					$args[$key] = $param ? $param : $value;
+				}
 			}
 		}
 
@@ -79,7 +91,7 @@ class Movie extends Controller {
 		foreach($args as $key => $value){
 			$response->header(
 				sprintf("X-REQUEST-%s", strtoupper($key)),
-				$value
+				is_array($value) ? implode(',', $value) : $value
 			);
 		}
 		return $response;
