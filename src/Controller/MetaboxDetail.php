@@ -46,7 +46,7 @@ class MetaboxDetail extends Controller {
 		$metabox = new MetaBox();
 		$metabox->setScreen( 'movie' );
 		$metabox->setId( 'movie-metabox-detail' );
-		$metabox->setTitle( 'Detail' );
+		$metabox->setTitle( 'Movie Detail' );
 		$metabox->setCallback( array( $this, 'metabox_detail_callback' ) );
 		$metabox->setCallbackArgs( array( 'is_display' => false ) );
 		$metabox->build();
@@ -61,9 +61,10 @@ class MetaboxDetail extends Controller {
 		$view = new View( $this->Framework );
 		$view->setTemplate( 'backend.blank' );
 		$view->setSections( [ 'Backend.Metabox.Detail' => [ 'name' => 'Detail', 'active' => true ] ] );
-		$view->setData( [
+		$view->setData( array(
+			'description' => get_post_meta( get_the_ID(), 'description', true ),
 			'year' => get_post_meta( get_the_ID(), 'year', true ),
-		]);
+		));
 		$view->setOptions( array( 'shortcode' => true ) );
 		$view->build();
 	}

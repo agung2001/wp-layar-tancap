@@ -56,7 +56,7 @@ class Backend extends Controller {
 		/** Load Vendors */
         if (
 			in_array( $screen->base, $screens ) ||
-			( $post->post_type === 'movie' && in_array($screen->pagenow, $allowedPage) )
+			( isset($post->post_type) && $post->post_type === 'movie' && in_array($screen->pagenow, $allowedPage) )
 		) {
 			/** Load Core Vendors */
 			wp_enqueue_script('jquery');

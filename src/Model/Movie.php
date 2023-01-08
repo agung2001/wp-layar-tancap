@@ -27,10 +27,9 @@ class Movie extends \LayarTancap\Model\Model
 	 * @param \LayarTancap\Plugin $plugin
 	 */
 	public function __construct( \LayarTancap\Plugin $plugin ) {
-
 		/** Create a post type */
 		parent::__construct( $plugin );
-        $this->args['labels'] = ['name' => ucwords($this->name)];
+        $this->args['labels'] = ['name' => __(ucwords($this->name), 'layartancap')];
 		$this->args['public'] = true;
 		$this->args['publicly_queryable'] = true;
 		$this->args['menu_icon'] = 'dashicons-media-video';
@@ -61,9 +60,16 @@ class Movie extends \LayarTancap\Model\Model
 			return;
 		}
 
-		/** Save Metabox Detail - Year */
-		$year = sanitize_text_field( $_POST['metabox_detail_year'] );
-		update_post_meta( $post->ID, 'year', $year );
+		/** Sanitize */
+		$data = array(
+			'description' => sanitize_text_field( $_POST['metabox_detail_description'] ),
+			'year' => sanitize_text_field( $_POST['metabox_detail_year'] )
+		);
+
+		/** Save Data */
+		foreach($data as $key => $value){
+			update_post_meta( $post->ID, $key, $value );
+		}
 	}
 
 }

@@ -11,7 +11,7 @@ $config = $this->Framework->getConfig();
         <div class="bg-cover-image shadow-sm bg-center bg-cover px-6 py-16">
             <div class="w-3/4 mx-auto">
                 <img
-                    class="mx-auto animate__animated animate__<?php echo esc_attr( $options->bingopress_animation->elements->logo ); ?>"
+                    class="mx-auto animate__animated animate__<?php echo esc_attr( $options->layartancap_animation->elements->logo ); ?>"
                     src="<?php echo esc_url( json_decode( LAYARTANCAP_PATH )->framework_url ); ?>/assets/img/logo.png"
                     alt="<?php echo esc_attr( $this->Page->getPageTitle() ); ?>"
                 >

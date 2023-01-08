@@ -11,8 +11,6 @@
  *
  * SOFTWARE LICENSE INFORMATION
  *
- * Copyright 2021 Artistudio, all rights reserved.
- *
  * For detailed information regards to the licensing of
  * this software, please review the license.txt
 */
@@ -25,11 +23,3 @@ require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 /** Initiate Plugin */
 $layartancap = new LayarTancap\Plugin();
 $layartancap->run();
-
-/** Activation Hook */
-//register_activation_hook( __FILE__, array( $layartancap, 'activate' ) );
-
-/** Uninstall Hook */
-//register_uninstall_hook( __FILE__, 'uninstall_fab_plugin' );
-//function uninstall_fab_plugin() {
-//	delete_option( 'layartancap_config' ); }
