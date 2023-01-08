@@ -1,4 +1,6 @@
-![screenshot](screenshot.png)
+<p align="center">
+	<img src="screenshot.png" alt="Layar Tancap">
+</p>
 
 # 🎬 Layar Tancap
 
