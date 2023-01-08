@@ -36,7 +36,7 @@ $config = $this->Framework->getConfig();
                 <?php $url = isset($config->url->contact) ? $config->url->contact : '#'; ?>
                 <a href="<?php echo esc_url($url); ?>" target="_blank" class="text-sm inline-flex items-center leading-sm px-3 py-1 mb-4 ml-2 bg-primary-600 text-white rounded-full">
                     <i class="fas fa-paper-plane mr-2"></i>
-					<?php echo esc_html__('Contact', 'bingopress') ?>
+					<?php echo esc_html__('Contact', 'layartancap') ?>
                 </a>
             </div>
 

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "movie-list",
+    "entry": "./assets/blocks/movie-list/index.js",
+    "output": {
+      "filename": "movie-list.min.js",
+      "path": "assets/build/js"
+    }
+  }
+]
