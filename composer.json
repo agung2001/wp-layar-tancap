@@ -9,13 +9,9 @@
     }
   ],
   "autoload": {
-    "classmap": [
-      "src/Api",
-      "src/Controller",
-      "src/Feature",
-      "src/Model",
-      "src/View"
-    ]
+    "psr-4": {
+      "LayarTancap\\": "src"
+    }
   },
   "require": {
     "artistudioxyz/dot-framework": "v0.1.2"

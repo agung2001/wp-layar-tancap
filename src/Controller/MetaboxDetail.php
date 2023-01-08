@@ -15,7 +15,7 @@ use LayarTancap\View;
 use LayarTancap\Wordpress\Hook\Action;
 use LayarTancap\WordPress\Model\MetaBox;
 
-class MetaboxDetail extends Base {
+class MetaboxDetail extends Controller {
 
 	/**
 	 * Admin constructor

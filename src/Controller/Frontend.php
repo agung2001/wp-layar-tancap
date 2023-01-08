@@ -13,7 +13,7 @@ namespace LayarTancap\Controller;
 
 use LayarTancap\Metabox\LAYARTANCAPMetaboxSetting;
 
-class Frontend extends Base {
+class Frontend extends Controller {
 
 	/**
 	 * Frontend constructor
