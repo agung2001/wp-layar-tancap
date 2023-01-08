@@ -6,6 +6,19 @@ module.exports = function (grunt) {
 
 		/** Compile TailwindCSS - Cross Platform */
 		shell: {
+			sass: {
+				command: () => {
+					let assets = { // No extension because added in loop command
+						"assets/css/backend/style.scss": `assets/build/css/backend.min.css`,
+						"assets/css/frontend/style.scss": `assets/build/css/frontend.min.css`,
+					}
+					let cmd = [];
+					for (const [source, target] of Object.entries(assets)) {
+						cmd.push(`npx sass ${source} ${target} --style compressed`)
+					}
+					return cmd.join(' && ')
+				},
+			},
 			npm_tailwind: {
 				command:
 					`npx tailwindcss build assets/css/tailwind/style.css -o assets/build/css/tailwind.min.css --silent && ` +
@@ -27,8 +40,10 @@ module.exports = function (grunt) {
 			},
 			target: {
 				files: {
-					'assets/build/css/tailwind.min.css':
-						'assets/build/css/tailwind.min.css',
+					'assets/build/css/backend.min.css':
+						'assets/build/css/backend.min.css',
+					'assets/build/css/frontend.min.css':
+						'assets/build/css/frontend.min.css',
 				},
 			},
 		},
@@ -60,7 +75,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
 
 	/** Register Tasks */
-	grunt.registerTask('build-css', ['shell:npm_tailwind', 'cssmin'])
+	grunt.registerTask('build-css', ['shell:npm_tailwind', 'shell:sass', 'cssmin'])
 	grunt.registerTask('build-js', [])
 	grunt.registerTask('build', ['build-css', 'build-js'])
 	grunt.registerTask('default', ['build-css','build-js',])

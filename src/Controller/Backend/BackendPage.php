@@ -13,7 +13,8 @@ namespace LayarTancap\Controller;
 
 use LayarTancap\View;
 use LayarTancap\WordPress\Hook\Action;
-use LayarTancap\WordPress\Theme\Page;
+use LayarTancap\WordPress\Page\Page;
+use LayarTancap\WordPress\Page\SubmenuPage;
 
 class BackendPage extends Controller {
 
@@ -21,11 +22,11 @@ class BackendPage extends Controller {
 	 * Admin constructor
 	 *
 	 * @return void
-	 * @var    object   $theme     Theme configuration
+	 * @var    object   $plugin     Plugin configuration
 	 * @pattern prototype
 	 */
-	public function __construct( $theme ) {
-		parent::__construct( $theme );
+	public function __construct( $plugin ) {
+		parent::__construct( $plugin );
 
 		/** @backend - Add custom admin page under settings */
 		$action = new Action();
@@ -37,7 +38,24 @@ class BackendPage extends Controller {
 	}
 
 	/**
-	 * Page Setting
+	 * Admin Menu Setting
+	 */
+	public function admin_menu_setting(){
+
+
+		/** Set Page */
+		$page = new SubmenuPage();
+		$page->setParentSlug( 'options-general.php' );
+		$page->setPageTitle(LAYARTANCAP_NAME);
+		$page->setMenuTitle(LAYARTANCAP_NAME);
+		$page->setCapability( 'manage_options' );
+		$page->setMenuSlug( $slug );
+		$page->setFunction( array( $this, 'page_setting' ) );
+		$page->build();
+	}
+
+	/**
+	 * Admin Menu Setting
 	 *
 	 * @backend @submenu setting
 	 * @return  void
@@ -48,7 +66,7 @@ class BackendPage extends Controller {
 		$sections['Backend.about'] = array( 'name' => 'About', 'active' => true);
 
 		/** Set View */
-		$view = new View( $this->Theme );
+		$view = new View( $this->Framework );
 		$view->setTemplate( 'backend.default' );
 		$view->setSections( $sections );
 		$view->addData(
@@ -57,17 +75,20 @@ class BackendPage extends Controller {
 			)
 		);
 		$view->setOptions( array( 'shortcode' => false ) );
+
         /**
          * Set Page.
          */
-        $page = new Page();
-        $page->setPageTitle(LAYARTANCAP_NAME);
-        $page->setMenuTitle(LAYARTANCAP_NAME);
-        $page->setCapability('manage_options');
+		/** Set Page */
+		$page = new SubmenuPage();
+		$page->setParentSlug( 'options-general.php' );
+		$page->setPageTitle(LAYARTANCAP_NAME);
+		$page->setMenuTitle(LAYARTANCAP_NAME);
+		$page->setCapability( 'manage_options' );
         $page->setMenuSlug(strtolower(LAYARTANCAP_NAME).'-setting');
-        $page->setFunction([$page, 'loadView']);
-        $page->setView($view);
-        $page->build();
+		$page->setFunction( array( $page, 'loadView' ) );
+		$page->setView($view);
+		$page->build();
 	}
 
 }

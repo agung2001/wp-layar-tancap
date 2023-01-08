@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aaa6384fee76eff0ea10820740fc9f22",
+    "content-hash": "1dde3a155c80672177a441fabbfd0e6d",
     "packages": [
         {
             "name": "artistudioxyz/dot-framework",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/artistudioxyz/dot-framework.git",
-                "reference": "6335be74c5af2a4abe789f41435ad382e2637576"
+                "reference": "a5fcb54392767373024d8a47a16fda284a95c6f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/artistudioxyz/dot-framework/zipball/6335be74c5af2a4abe789f41435ad382e2637576",
-                "reference": "6335be74c5af2a4abe789f41435ad382e2637576",
+                "url": "https://api.github.com/repos/artistudioxyz/dot-framework/zipball/a5fcb54392767373024d8a47a16fda284a95c6f4",
+                "reference": "a5fcb54392767373024d8a47a16fda284a95c6f4",
                 "shasum": ""
             },
             "type": "library",
@@ -40,7 +40,7 @@
             "description": "Simple WordPress Utility Library for building better Plugins and Themes.",
             "support": {
                 "issues": "https://github.com/artistudioxyz/dot-framework/issues",
-                "source": "https://github.com/artistudioxyz/dot-framework/tree/v0.1.1"
+                "source": "https://github.com/artistudioxyz/dot-framework/tree/v0.1.2"
             },
             "funding": [
                 {
@@ -48,7 +48,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-01-06T08:51:19+00:00"
+            "time": "2023-01-08T02:44:54+00:00"
         }
     ],
     "packages-dev": [],

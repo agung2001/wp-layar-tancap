@@ -1,14 +1,14 @@
-.fab-container {
-    // Tailwind CSS
-    //@import "../../build/css/tailwind.min";
+.layartancap-container {
+	// Tailwind CSS
+	@import '../../build/css/tailwind.min';
 
-    // General Asset
-    @import "_mixin";
-    @import "_asset";
+	// General Asset
+	@import '_mixin';
+	@import '_asset';
 
-    // Template Modification
-    @import "_template";
+	// Template Modification
+	@import '_template';
 }
 
 /** External Styling */
-@import "_external";
+@import '_external';

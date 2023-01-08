@@ -23,8 +23,8 @@
 require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
 /** Initiate Plugin */
-//$fab = new LayarTancap\Plugin();
-//$fab->run();
+$layartancap = new LayarTancap\Plugin();
+$layartancap->run();
 
 /** Activation Hook */
 //register_activation_hook( __FILE__, array( $layartancap, 'activate' ) );

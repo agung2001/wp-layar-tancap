@@ -1,14 +1,14 @@
 <?php
 
-namespace Fab\Feature;
+namespace LayarTancap\Feature;
 
 !defined( 'WPINC ' ) or die;
 
 /**
  * Initiate plugins
  *
- * @package    Fab
- * @subpackage Fab\Includes
+ * @package    LayarTancap
+ * @subpackage LayarTancap\Includes
  */
 
 class Backend extends Feature {

@@ -11,6 +11,8 @@ namespace LayarTancap\Controller;
  * @subpackage LayarTancap/Controller
  */
 
-class Base extends Controller {
+use LayarTancap\Plugin\Controller as PluginController;
+
+class Base extends PluginController {
 
 }

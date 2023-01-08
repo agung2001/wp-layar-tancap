@@ -1,6 +1,7 @@
 {
   "name": "Layar Tancap",
   "version": "0.0.1",
+  "production": false,
   "enableHooks": [
     "action",
     "filter",
