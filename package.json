@@ -1,0 +1,19 @@
+{
+  "name": "layar-tancap",
+  "version": "0.0.1",
+  "description": "a Simple Movies REST API Plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agung2001/wp-layar-tancap.git"
+  },
+  "author": "Agung Sundoro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agung2001/wp-layar-tancap/issues"
+  },
+  "homepage": "https://github.com/agung2001/wp-layar-tancap#readme"
+}

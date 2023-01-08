@@ -1,0 +1,12 @@
+{
+    "name": "muhammadsundoro/layar-tancap",
+    "description": "a Simple Movies REST API Plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Agung Sundoro",
+            "email": "muhagung2001@gmail.com"
+        }
+    ],
+    "require": {}
+}
