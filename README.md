@@ -15,7 +15,7 @@ a Simple Movies REST API Plugin
 
 ## 🚦 API Endpoint
 
-- `GET` `/wp-json/rymera/v1/movies`
+- `GET` `/wp-json/rymera/v1/movies?`
   - `page=` : `1`
   - `offset=` : `0`
   - `posts_per_page=` : `-1`
