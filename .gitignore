@@ -3,7 +3,12 @@
 /.vscode
 
 # Vendors
-/vendor
+/vendors
 /node_modules
 
+# Extras
+.env
 .DS_STORE
+
+# Builds
+/assets/build

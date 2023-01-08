@@ -1,0 +1,40 @@
+{
+  "git": {
+    "requireBranch": "master",
+    "commitMessage": "chore: release v${version}"
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "in": "config.json",
+      "out": "config.json"
+    },
+    "@release-it/conventional-changelog": {
+      "type": ["feat", "fix"],
+      "scope": ["wp"],
+      "header": "# 📟 Changelog",
+      "infile": "changelog.txt",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "scope": "wp",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "scope": "wp",
+            "section": "Bug Fixes"
+          },
+          {}
+        ]
+      }
+    }
+  }
+}

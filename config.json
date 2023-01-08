@@ -1,0 +1,39 @@
+{
+  "name": "Layar Tancap",
+  "version": "0.0.1",
+  "enableHooks": [
+    "action",
+    "filter",
+    "shortcode"
+  ],
+  "description": "a Simple Movies REST API Plugin.",
+  "default": {
+    "layartancap_animation": {
+      "enable": 1,
+      "elements": {
+        "logo": "bounceIn",
+        "tab": "heartBeat",
+        "content": "fadeIn",
+        "layartancap_active": "fadeIn",
+        "layartancap_inactive": "fadeOut"
+      }
+    },
+    "layartancap_assets": {
+      "backend": {
+        "layartancap-fontawesome-css": {
+          "status": true,
+          "type": "css",
+          "src": "vendor/fontawesome/css/all.min.css"
+        }
+      },
+      "frontend": {
+        "layartancap-fontawesome-css": {
+          "status": true,
+          "type": "css",
+          "src": "vendor/fontawesome/css/all.min.css"
+        }
+      }
+    },
+    "layartancap_hooks": []
+  }
+}
