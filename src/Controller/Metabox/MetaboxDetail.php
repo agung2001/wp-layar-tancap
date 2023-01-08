@@ -52,10 +52,10 @@ class MetaboxDetail extends Base {
 		$metabox->build();
 	}
 
-
 	/**
 	 * Metabox Detail set view template
 	 *
+	 * @return      void
 	 */
 	public function metabox_detail_callback() {
 		$view = new View( $this->Framework );
