@@ -48,6 +48,5 @@ who had helped provide and develop these libraries
 
 ## ⭐️ Support & Contribution
 - Help support me by giving a 🌟 or [donate][website]
-- Please refer to [CONTRIBUTING](CONTRIBUTING.md) to see a way to contribute to this repo
 
 [website]: https://agung2001.github.io
