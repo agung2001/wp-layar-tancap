@@ -4,53 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dde3a155c80672177a441fabbfd0e6d",
-    "packages": [
-        {
-            "name": "artistudioxyz/dot-framework",
-            "version": "v0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/artistudioxyz/dot-framework.git",
-                "reference": "a5fcb54392767373024d8a47a16fda284a95c6f4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/artistudioxyz/dot-framework/zipball/a5fcb54392767373024d8a47a16fda284a95c6f4",
-                "reference": "a5fcb54392767373024d8a47a16fda284a95c6f4",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/Framework",
-                    "src/WordPress"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Agung Sundoro",
-                    "email": "muhagung2001@gmail.com"
-                }
-            ],
-            "description": "Simple WordPress Utility Library for building better Plugins and Themes.",
-            "support": {
-                "issues": "https://github.com/artistudioxyz/dot-framework/issues",
-                "source": "https://github.com/artistudioxyz/dot-framework/tree/v0.1.2"
-            },
-            "funding": [
-                {
-                    "url": "https://agung2001.github.io",
-                    "type": "custom"
-                }
-            ],
-            "time": "2023-01-08T02:44:54+00:00"
-        }
-    ],
+    "content-hash": "4cec9620753344d44e805cbb7b76917c",
+    "packages": [],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",

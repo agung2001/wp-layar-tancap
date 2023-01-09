@@ -2,6 +2,7 @@
   "name": "muhammadsundoro/layar-tancap",
   "description": "a Simple Movies REST API Plugin",
   "license": "MIT",
+  "framework": "v0.1.2",
   "authors": [
     {
       "name": "Agung Sundoro",
@@ -12,8 +13,5 @@
     "psr-4": {
       "LayarTancap\\": "src"
     }
-  },
-  "require": {
-    "artistudioxyz/dot-framework": "v0.1.2"
   }
 }
