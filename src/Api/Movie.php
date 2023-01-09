@@ -11,7 +11,7 @@ namespace LayarTancap\Api;
  * @subpackage LayarTancap/Controller
  */
 
-use LayarTancap\Controller\Controller;
+use LayarTancap\Controller;
 use LayarTancap\WordPress\Hook\Action;
 
 class Movie extends Controller {

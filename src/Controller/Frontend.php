@@ -11,6 +11,7 @@ namespace LayarTancap\Controller;
  * @subpackage LayarTancap/Controller
  */
 
+use LayarTancap\Controller;
 use LayarTancap\Metabox\LAYARTANCAPMetaboxSetting;
 
 class Frontend extends Controller {

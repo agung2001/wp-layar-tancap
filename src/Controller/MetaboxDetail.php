@@ -11,6 +11,7 @@ namespace LayarTancap\Controller;
  * @subpackage LayarTancap/Controller
  */
 
+use LayarTancap\Controller;
 use LayarTancap\View;
 use LayarTancap\Wordpress\Hook\Action;
 use LayarTancap\WordPress\Model\MetaBox;
@@ -33,7 +34,6 @@ class MetaboxDetail extends Controller {
 		$action->setHook( 'add_meta_boxes' );
 		$action->setCallback( 'metabox_detail' );
 		$action->setDescription( 'Add Detail metabox to Movie CPT' );
-		$action->setFeature( $plugin->getFeatures()['core_backend'] );
 		$this->hooks[] = $action;
 	}
 

@@ -11,7 +11,6 @@ a Simple Movies REST API Plugin
 - Composer Update : `composer update`
 - NPM Install : `npm i`
 - Grunt Build : `npx grunt`
-  - Refactor Dot Framework : `grunt shell:dot_refactor`
 
 ## 🚦 API Endpoint
 

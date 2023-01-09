@@ -11,9 +11,9 @@ namespace LayarTancap\Controller;
 * @subpackage LayarTancap/Controller
 */
 
+use LayarTancap\Controller;
 use LayarTancap\View;
 use LayarTancap\WordPress\Hook\Action;
-use LayarTancap\WordPress\Page\Page;
 use LayarTancap\WordPress\Page\SubmenuPage;
 
 class BackendPage extends Controller {
@@ -32,7 +32,7 @@ class BackendPage extends Controller {
 		$action = new Action();
 		$action->setComponent( $this );
 		$action->setHook( 'admin_menu' );
-		$action->setCallback( 'page_setting' );
+		$action->setCallback( 'admin_menu_setting' );
 		$action->setMandatory( true );
 		$this->hooks[] = $action;
 	}
@@ -41,8 +41,6 @@ class BackendPage extends Controller {
 	 * Admin Menu Setting
 	 */
 	public function admin_menu_setting(){
-
-
 		/** Set Page */
 		$page = new SubmenuPage();
 		$page->setParentSlug( 'options-general.php' );

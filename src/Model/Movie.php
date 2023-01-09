@@ -10,10 +10,10 @@ namespace LayarTancap\Model;
 
 ! defined( 'WPINC ' ) || die;
 
-use LayarTancap\WordPress\Hook\Action;
 use LayarTancap\Helper\LAYARTANCAPItem;
+use LayarTancap\WordPress\Hook\Action;
 
-class Movie extends \LayarTancap\Model\Model
+class Movie extends \LayarTancap\Model
 {
 
 	/**
