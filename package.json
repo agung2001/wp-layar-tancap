@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:wp": "wp-scripts build",
     "watch:wp": "wp-scripts start",
-    "release": "release-it --",
+    "release": "dotenv release-it --",
     "wpcs": "phpcs --standard=phpcs.xml --extensions=php src > sniffer.txt"
   },
   "repository": {
