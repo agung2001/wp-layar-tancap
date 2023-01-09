@@ -12,6 +12,9 @@ a Simple Movies REST API Plugin
 - NPM Install : `npm i`
 - Grunt Build : `npx grunt`
 
+## 🎮 Commands
+- WordPress Code Sniffer : `npm run wpcs`
+
 ## 🚦 API Endpoint
 
 - `GET` `/wp-json/rymera/v1/movies?`
@@ -36,9 +39,9 @@ who had helped provide and develop these libraries
 - 📟 3rd Party Libraries : [Fontawesome](https://fontawesome.com/)
 - 📟 Compiler: [GruntJS](https://gruntjs.com/)
 - 📟 Framework : [Dot Framework](https://github.com/artistudioxyz/dot-framework), [TailwindCSS](https://tailwindcss.com/)
-- 📟 Languages : [SASS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/)
+- 📟 Languages : [SASS](https://sass-lang.com/)
 - 📟 Lint & Hooks : [ESLint](https://eslint.org/), [Husky](https://typicode.github.io/husky), [Prettier](https://prettier.io/)
-- 📟 QA & Test : [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer), [Selenium](https://www.selenium.dev/), [WPCS](https://github.com/WordPress/WordPress-Coding-Standards)
+- 📟 QA & Test : [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer), [WPCS](https://github.com/WordPress/WordPress-Coding-Standards)
 - 📟 Release & Specification : [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), [Release-it](https://www.npmjs.com/package/release-it)
 - 📟 Vendors : [Composer](https://getcomposer.org/), [NPM](https://www.npmjs.com/)
 - 📟 Version Control : [Git](https://git-scm.com/)

@@ -1,9 +1,4 @@
 <?php
-
-namespace LayarTancap\Helper;
-
-!defined( 'WPINC ' ) or die;
-
 /**
  * Helper library for LayarTancap framework
  *
@@ -11,35 +6,41 @@ namespace LayarTancap\Helper;
  * @subpackage LayarTancap\Includes
  */
 
-trait Plan {
+namespace LayarTancap\Helper;
 
-    /**
-     * Get Premium Plan Info
-     * @return bool
-     */
-    public function isPremiumPlan()
-    {
-        return true;
-        /** Get Plan from config.json file */
-        $plan = $this->Framework->getConfig()->premium;
+!defined('WPINC ') or die;
 
-        /** Freemius - Check Premium Plan */
-        if(function_exists('layartancap_freemius')){
-            if(layartancap_freemius()->is__premium_only()){
-                if(layartancap_freemius()->is_plan('pro')) $plan = 'pro';
-            }
-        }
+trait Plan
+{
 
-        return $plan;
-    }
+	/**
+	 * Get Premium Plan Info
+	 * @return bool
+	 */
+	public function isPremiumPlan()
+	{
+		return true;
+		/** Get Plan from config.json file */
+		$plan = $this->Framework->getConfig()->premium;
 
-    /**
-     * Get Upgrade URL
-     * @return string
-     */
-    public function getUpgradeURL(){
-        return (function_exists('layartancap_freemius')) ?
-            layartancap_freemius()->get_upgrade_url() : false;
-    }
+		/** Freemius - Check Premium Plan */
+		if (function_exists('layartancap_freemius')) {
+			if (layartancap_freemius()->is__premium_only()) {
+				if (layartancap_freemius()->is_plan('pro')) $plan = 'pro';
+			}
+		}
+
+		return $plan;
+	}
+
+	/**
+	 * Get Upgrade URL
+	 * @return string
+	 */
+	public function getUpgradeURL()
+	{
+		return (function_exists('layartancap_freemius')) ?
+			layartancap_freemius()->get_upgrade_url() : false;
+	}
 
 }

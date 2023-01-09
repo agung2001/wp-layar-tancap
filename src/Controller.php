@@ -1,4 +1,10 @@
 <?php
+/**
+ * Initiate framework
+ *
+ * @package    LayarTancap
+ * @subpackage LayarTancap/Controller
+ */
 
 namespace LayarTancap;
 
@@ -6,13 +12,6 @@ use LayarTancap\Controller\loadController;
 use LayarTancap\Controller\loadModel;
 
 !defined('WPINC ') or die();
-
-/**
- * Initiate framework
- *
- * @package    LayarTancap
- * @subpackage LayarTancap/Controller
- */
 
 class Controller
 {

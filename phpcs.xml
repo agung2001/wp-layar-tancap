@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Artistudio" >
+
+    <description>WordPress Coding Standards for Artistudio</description>
+
+    <!-- Disable <?= php short tag -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
+
+    <!-- Code spacing -->
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+
+    <!-- WordPress escape check -->
+    <rule ref="WordPress.Security.EscapeOutput"/>
+    <!-- WordPress sanitize input check -->
+    <rule ref="WordPress.Security.ValidatedSanitizedInput"/>
+
+</ruleset>

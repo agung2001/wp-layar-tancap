@@ -62,9 +62,16 @@ class Movie extends \LayarTancap\Model
 
 		/** Sanitize */
 		$data = array(
-			'description' => sanitize_text_field( $_POST['metabox_detail_description'] ),
-			'year' => sanitize_text_field( $_POST['metabox_detail_year'] )
+			'description' => 'metabox_detail_description' ,
+			'year' => 'metabox_detail_year'
 		);
+		foreach($data as $key => $value){
+			$data[$key] = isset( $_POST[$value] ) ? sanitize_text_field(
+				wp_unslash(
+					$_POST[$value]
+				)
+			) : '';
+		}
 
 		/** Save Data */
 		foreach($data as $key => $value){

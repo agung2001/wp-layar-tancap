@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:wp": "wp-scripts build",
-    "watch:wp": "wp-scripts start"
+    "watch:wp": "wp-scripts start",
+    "wpcs": "phpcs --standard=phpcs.xml --extensions=php src > sniffer.txt"
   },
   "repository": {
     "type": "git",

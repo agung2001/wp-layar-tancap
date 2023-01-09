@@ -9,6 +9,7 @@
 # Extras
 .env
 .DS_STORE
+sniffer.txt
 
 # Builds
 /assets/build
