@@ -32,24 +32,9 @@ class BackendPage extends Controller {
 		$action = new Action();
 		$action->setComponent( $this );
 		$action->setHook( 'admin_menu' );
-		$action->setCallback( 'admin_menu_setting' );
+		$action->setCallback( 'page_setting' );
 		$action->setMandatory( true );
 		$this->hooks[] = $action;
-	}
-
-	/**
-	 * Admin Menu Setting
-	 */
-	public function admin_menu_setting(){
-		/** Set Page */
-		$page = new SubmenuPage();
-		$page->setParentSlug( 'options-general.php' );
-		$page->setPageTitle(LAYARTANCAP_NAME);
-		$page->setMenuTitle(LAYARTANCAP_NAME);
-		$page->setCapability( 'manage_options' );
-		$page->setMenuSlug( $slug );
-		$page->setFunction( array( $this, 'page_setting' ) );
-		$page->build();
 	}
 
 	/**
