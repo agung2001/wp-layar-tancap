@@ -16,6 +16,7 @@ class Helper
 	/** Load Trait */
 	use File;
 	use Directory;
+	use Option;
 	use Text;
 	use Plan;
 
