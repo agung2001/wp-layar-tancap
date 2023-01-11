@@ -1,7 +1,7 @@
 [
   {
     "name": "movie-list",
-    "entry": "./blocks/movie-list/src/App.jsx",
+    "entry": "./blocks/movie-list/src/wordpress.js",
     "output": {
       "filename": "movie-list.min.js",
       "path": "assets/build/js/blocks/movie-list"
