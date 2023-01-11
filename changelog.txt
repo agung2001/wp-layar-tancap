@@ -1,3 +1,10 @@
 # 📟 Changelog
 
+## [0.1.1](https://github.com/agung2001/wp-layar-tancap/compare/0.1.0...0.1.1) (2023-01-11)
+
+
+### Bug Fixes
+
+* **wp:** function or method not found ArrayMergeRecursive ([9ada574](https://github.com/agung2001/wp-layar-tancap/commit/9ada574cd8755760b693511cad3d16a890149a80))
+
 ## 0.1.0 (2023-01-09)

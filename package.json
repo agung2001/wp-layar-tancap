@@ -1,6 +1,6 @@
 {
   "name": "layar-tancap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a Simple Movies REST API Plugin",
   "main": "index.js",
   "scripts": {
