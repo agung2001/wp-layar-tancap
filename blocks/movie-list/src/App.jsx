@@ -1,12 +1,12 @@
 // import { useState } from '@wordpress/element';
-// import './App.css'
+import { __ } from '@wordpress/i18n';
 
 export default () => {
 	// const [count, setCount] = useState(0)
 
 	return <>
 		<div>
-			Hello World
+			{ __('Hello World', 'layar-tancap') }
 		</div>
 	</>
 }
