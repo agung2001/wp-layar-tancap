@@ -37,7 +37,7 @@ all the credits go to these peoples and communities
 who had helped provide and develop these libraries
 
 - 📟 3rd Party Libraries : [Fontawesome](https://fontawesome.com/)
-- 📟 Compiler: [GruntJS](https://gruntjs.com/)
+- 📟 Compiler: [GruntJS](https://gruntjs.com/), [Vite](https://vitejs.dev/)
 - 📟 Framework : [Dot Framework](https://github.com/artistudioxyz/dot-framework), [TailwindCSS](https://tailwindcss.com/)
 - 📟 Languages : [SASS](https://sass-lang.com/)
 - 📟 Lint & Hooks : [ESLint](https://eslint.org/), [Husky](https://typicode.github.io/husky), [Prettier](https://prettier.io/)
