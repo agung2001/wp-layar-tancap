@@ -58,13 +58,6 @@ class Blocks extends Controller
 
 		/** Register Blocks */
 		foreach ($blocks as $block) {
-			/** Enqueue script for shortcode */
-			$this->WP->wp_enqueue_script(
-				sprintf('block-%s',$block['name']),
-				sprintf('build/js/shortcodes/%s/shortcode.js', $block['name']),
-				array(), '', true
-			);
-
 			/** Register Script */
 			wp_register_script(
 				sprintf("block-%s-js", $block['name']),
@@ -89,6 +82,15 @@ class Blocks extends Controller
 		$atts = shortcode_atts( array(
 			'block' => 'block',
 		), $atts, 'layar_tancap_block' );
+
+		/** Enqueue script for shortcode */
+		if($atts['block'] != 'block'){
+			$this->WP->wp_enqueue_script(
+				sprintf('block-%s',$atts['block']),
+				sprintf('build/js/shortcodes/%s/shortcode.js', $atts['block']),
+				array(), '', true
+			);
+		}
 		return sprintf('<div id="block-%s"></div>', $atts['block']);
 	}
 
