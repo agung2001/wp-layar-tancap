@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from '@wordpress/element';
 import reactLogo from './assets/react.svg'
 import './App.css'
 
