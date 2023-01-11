@@ -8,8 +8,8 @@
 
 # Extras
 .env
-.DS_STORE
 sniffer.txt
+.DS_Store
 
 # Builds
 /assets/build
