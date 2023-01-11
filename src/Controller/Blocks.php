@@ -12,6 +12,7 @@ namespace LayarTancap\Controller;
 
 use LayarTancap\Controller;
 use LayarTancap\WordPress\Hook\Action;
+use LayarTancap\WordPress\Hook\Shortcode;
 
 class Blocks extends Controller
 {
@@ -60,7 +61,7 @@ class Blocks extends Controller
 			/** Enqueue script for shortcode */
 			$this->WP->wp_enqueue_script(
 				sprintf('block-%s',$block['name']),
-				sprintf('build/js/blocks/%s/shortcode.js', $block['name']),
+				sprintf('build/js/shortcodes/%s/shortcode.js', $block['name']),
 				array(), '', true
 			);
 

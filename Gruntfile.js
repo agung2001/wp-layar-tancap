@@ -1,4 +1,5 @@
 const path = require("path");
+let blockConfig = require( path.resolve(__dirname, 'blocks/blocks.json') );
 module.exports = function (grunt) {
 	/** Configuration */
 	grunt.initConfig({
@@ -6,6 +7,15 @@ module.exports = function (grunt) {
 
 		/** Compile TailwindCSS - Cross Platform */
 		shell: {
+			...(() => { /** Get Shortcode Build Commands */
+				let shell = {}
+				blockConfig.map((b) => {
+					shell[`build_shortcode_${b.name}`] = {
+						command: `cd blocks/${b.name} && npm run build`
+					}
+				})
+				return shell;
+			})(),
 			sass: {
 				command: () => {
 					let assets = { // No extension because added in loop command
@@ -23,6 +33,9 @@ module.exports = function (grunt) {
 				command:
 					`npx tailwindcss build assets/css/tailwind/style.css -o assets/build/css/tailwind.min.css --silent && ` +
 					`node tailwindcsssupport.js`,
+			},
+			npm_wordpress: {
+				command: `npm run build:wp`,
 			},
 			dot_refactor: {
 				command: `aspri --wp-refactor --path ${path.resolve(
@@ -54,7 +67,11 @@ module.exports = function (grunt) {
 				livereload: false,
 			},
 			js: {
-				files: 'assets/js/**/*.js',
+				files: [
+					'assets/js/**/*.js',
+					'blocks/**/*.js',
+					'blocks/**/*.jsx',
+				],
 				tasks: ['build-js'],
 			},
 			css: {
@@ -74,9 +91,16 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch')
 	grunt.loadNpmTasks('grunt-contrib-cssmin')
 
+	/** Shortcodes */
+	let ShortcodeBuild = [];
+	blockConfig.map((b) => {
+		ShortcodeBuild.push(`build-shortcode-${b.name}`)
+		grunt.registerTask(`build-shortcode-${b.name}`, [ `shell:build_shortcode_${b.name}` ]);
+	})
+
 	/** Register Tasks */
 	grunt.registerTask('build-css', ['shell:npm_tailwind', 'shell:sass', 'cssmin'])
-	grunt.registerTask('build-js', [])
+	grunt.registerTask('build-js', [ 'shell:npm_wordpress', ...ShortcodeBuild])
 	grunt.registerTask('build', ['build-css', 'build-js'])
 	grunt.registerTask('default', ['build-css','build-js',])
 }

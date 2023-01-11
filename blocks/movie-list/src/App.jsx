@@ -6,7 +6,7 @@ export default () => {
 
 	return <>
 		<div>
-			{ __('Hello World', 'layar-tancap') }
+			{ __('Hello World!', 'layar-tancap') }
 		</div>
 	</>
 }
