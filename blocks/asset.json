@@ -1,0 +1,10 @@
+[
+  {
+    "name": "movie-list",
+    "entry": "./blocks/movie-list/src/App.jsx",
+    "output": {
+      "filename": "movie-list.min.js",
+      "path": "assets/build/js"
+    }
+  }
+]

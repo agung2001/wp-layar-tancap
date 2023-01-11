@@ -1,6 +1,6 @@
 const path = require('path');
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config.js' );
-let blocksConfig = require( path.resolve(__dirname, 'assets/blocks/asset.json') );
+let blocksConfig = require( path.resolve(__dirname, 'blocks/asset.json') );
 
 /** Generate Blocks Config */
 blocksConfig = blocksConfig.map((c) => {
