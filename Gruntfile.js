@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 				let shell = {}
 				blockConfig.map((b) => {
 					shell[`build_shortcode_${b.name}`] = {
-						command: `cd blocks/${b.name} && npm run build`
+						command: `npx vite build -c blocks/${b.name}/vite.config.js`
 					}
 				})
 				return shell;

@@ -89,7 +89,7 @@ class Blocks extends Controller
 		$atts = shortcode_atts( array(
 			'block' => 'block',
 		), $atts, 'layar_tancap_block' );
-		return sprintf('<div class="block-%s"></div>', $atts['block']);
+		return sprintf('<div id="block-%s"></div>', $atts['block']);
 	}
 
 }

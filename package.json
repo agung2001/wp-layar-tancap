@@ -20,6 +20,9 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@release-it/bumper": "^4.0.0",
     "@release-it/conventional-changelog": "^5.1.1",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
     "@wordpress/block-library": "^8.0.0",
     "@wordpress/blocks": "^12.0.0",
     "@wordpress/components": "^23.0.0",
@@ -36,7 +39,8 @@
     "prettier-plugin-svelte": "^2.9.0",
     "release-it": "^15.5.1",
     "shelljs": "^0.8.5",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
   },
   "author": "Agung Sundoro",
   "license": "MIT",
